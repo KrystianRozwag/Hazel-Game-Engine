@@ -31,9 +31,10 @@
 *.out
 *.app
 
-.vs/
+
 
 # Build results
+.vs/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -48,3 +49,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+.vs/Hazel/FileContentIndex/read.lock
+.vs/Hazel/v17/Browse.VC.db
+.vs/Hazel/v17/ipch/AutoPCH/ed049a694dcaf10f/TEST.ipch
+.vs/Hazel/v17/Solution.VC.db
