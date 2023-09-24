@@ -1,6 +1,0 @@
-﻿  SanboxApp.cpp
-K:\Hazel\Hazel\src\Hazel\Log.h(15,42): warning C4251: "Hazel::Log::s_CoreLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Hazel::Log"
-K:\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : zobacz deklarację „std::shared_ptr<spdlog::logger>”
-K:\Hazel\Hazel\src\Hazel\Log.h(16,42): warning C4251: "Hazel::Log::s_ClientLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Hazel::Log"
-K:\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : zobacz deklarację „std::shared_ptr<spdlog::logger>”
-  Sandbox.vcxproj -> K:\Hazel\bin\Debug-x64\Sandbox\Sandbox.exe
