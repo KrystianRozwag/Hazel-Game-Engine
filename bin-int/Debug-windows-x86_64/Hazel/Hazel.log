@@ -1,9 +1,0 @@
-﻿  Application.cpp
-  Log.cpp
-K:\Hazel\Hazel\src\Hazel\Log.h(15,42): warning C4251: "Hazel::Log::s_CoreLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Hazel::Log"
-K:\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : zobacz deklarację „std::shared_ptr<spdlog::logger>”
-K:\Hazel\Hazel\src\Hazel\Log.h(16,42): warning C4251: "Hazel::Log::s_ClientLogger": class "std::shared_ptr<spdlog::logger>" wymaga posiadania użycia interfejsu biblioteki dll przez klientów class "Hazel::Log"
-K:\Hazel\Hazel\vendor\spdlog\include\spdlog\details\registry.h(34,31): message : zobacz deklarację „std::shared_ptr<spdlog::logger>”
-  Generowanie kodu...
-     Trwa tworzenie biblioteki ..\bin\Debug-windows-x86_64\Hazel\Hazel.lib i obiektu ..\bin\Debug-windows-x86_64\Hazel\Hazel.exp
-  Hazel.vcxproj -> K:\Hazel\bin\Debug-windows-x86_64\Hazel\Hazel.dll
