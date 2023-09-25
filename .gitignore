@@ -1,38 +1,5 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
 
 # Binaries
-**/bin/
 bin-int/
 Intermediates/
 
@@ -41,29 +8,7 @@ Intermediates/
 
 # Visual Studio files and folder
 .vs/
-**.sln
-**.vcxproj
-**.vcxproj.filters
-**.vcxproj.user
-**.csproj
 
-
-# Build results
-.vs/
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
 .vs/Hazel/FileContentIndex/read.lock
 .vs/Hazel/v17/Browse.VC.db
 .vs/Hazel/v17/ipch/AutoPCH/ed049a694dcaf10f/TEST.ipch
