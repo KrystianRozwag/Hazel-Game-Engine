@@ -2,6 +2,5 @@
 
 
 #define IMGUI_IMPL_OPENGL_LOADER_GLAD
-//#include  "examples/imgui_impl_opengl3.cpp"
-//#include "examples/imgui_impl_glfw.cpp"
-#include "Hazel/Platform/OpenGL/ImGuiOpenGLRenderer.h"
+#include  "examples/imgui_impl_opengl3.cpp"
+#include "examples/imgui_impl_glfw.cpp"
