@@ -112,13 +112,29 @@ public:
 		m_BlueShader.reset(new Hazel::Shader(blueShadervertexSrc, blueShaderfragmentSrc));
 	}
 
-	void OnUpdate() override
+	void OnUpdate(Hazel::Timestep ts) override
 	{
+		HZ_TRACE("Delta time: {0}s", ts.GetSeconds());
+		if (Hazel::Input::IsKeyPressed(HZ_KEY_LEFT))
+			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
+		else if (Hazel::Input::IsKeyPressed(HZ_KEY_RIGHT))
+			m_CameraPosition.x += m_CameraMoveSpeed * ts;
+
+		if (Hazel::Input::IsKeyPressed(HZ_KEY_DOWN))
+			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
+		else if (Hazel::Input::IsKeyPressed(HZ_KEY_UP))
+			m_CameraPosition.y += m_CameraMoveSpeed * ts;
+
+		if (Hazel::Input::IsKeyPressed(HZ_KEY_A))
+			m_CameraRotation += m_CameraRotationSpeed * ts;
+		if (Hazel::Input::IsKeyPressed(HZ_KEY_D))
+			m_CameraRotation -= m_CameraRotationSpeed * ts;
+
 		Hazel::RenderCommand::SetClearColor({ 0.2f, 0.2f, 0.2f, 1 });
 		Hazel::RenderCommand::Clear();
 
 		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(0.0f);
+		m_Camera.SetRotation(m_CameraRotation);
 
 		Hazel::Renderer::BeginScene(m_Camera);
 
@@ -139,21 +155,6 @@ public:
 		dispatcher.Dispatch <Hazel::KeyPressedEvent>(HZ_BIND_EVENT_FN(ExampleLayer::OnKeyPressedEvent));
 
 	}
-	bool OnKeyPressedEvent(Hazel::KeyPressedEvent& event) {
-		if (event.GetKeyCode() == HZ_KEY_LEFT)
-			m_CameraPosition.x -= m_CameraSpeed;
-
-		if (event.GetKeyCode() == HZ_KEY_RIGHT)
-			m_CameraPosition.x += m_CameraSpeed;
-
-		if (event.GetKeyCode() == HZ_KEY_DOWN)
-			m_CameraPosition.y -= m_CameraSpeed;
-
-		if (event.GetKeyCode() == HZ_KEY_UP)
-			m_CameraPosition.y += m_CameraSpeed;
-		
-		return false;
-	}
 
 private:
 
@@ -164,7 +165,9 @@ private:
 
 	Hazel::OrthographicCamera m_Camera;
 	glm::vec3 m_CameraPosition;
-	float m_CameraSpeed = 0.1f;
+	float m_CameraMoveSpeed = 5.0f;
+	float m_CameraRotationSpeed = 180.0f;
+	float m_CameraRotation = 0.0f;
 };
 	
 
